@@ -14,6 +14,7 @@ const CryptoCalc = () => {
     const [Taxrate, setTaxrate] = useState(0);
     const [Taxval, setTaxval] = useState("");
     const [CapitalGain, setCapitalGain] = useState(0);
+    const [netCapitalGain, setNetCapitalGain] = useState(0);
     const [Discount, setDiscount] = useState(0);
     const [PayableTax, setPayableTax] = useState(0);
 
@@ -52,17 +53,23 @@ const CryptoCalc = () => {
                     setDiscount(calculate_discount);
                     const tax_need_to_pay = Discount * Taxrate;
                     const netCapitalGain = gains - Discount;
-                    setCapitalGain(netCapitalGain);
+                    setCapitalGain(gains);
+                    setNetCapitalGain(netCapitalGain)
                     setPayableTax(tax_need_to_pay);
 
                 }
                 else {
                     const tax_need_to_pay = gains * Taxrate;
                     setCapitalGain(gains);
+                    setNetCapitalGain(gains);
                     setPayableTax(tax_need_to_pay);
 
                 }
 
+            }
+            else{
+                setCapitalGain(0);
+                setPayableTax(0);
             }
         }
         else {
@@ -229,7 +236,7 @@ const CryptoCalc = () => {
                         <div className='w-full px-1 mb-6 md:w-1/2 md:mb-0 md:mt-6'>
                             <div className='block w-full px-4 py-3 bg-gray-200 text-gray-700 border rounded leading-tight focus:outline-none focus:bg-white'>
                                 <h1 className='align-center text-center'>Net capital gains amount</h1>
-                                <h1 className='pt-1 align-center text-center font-bold items-center text-[#0FBA83]  '>${CapitalGain}</h1>
+                                <h1 className='pt-1 align-center text-center font-bold items-center text-[#0FBA83]  '>${netCapitalGain}</h1>
                             </div>
                         </div>
                         <div className='w-full px-1 mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0 '>
