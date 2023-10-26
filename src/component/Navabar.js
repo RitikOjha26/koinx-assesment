@@ -50,7 +50,7 @@ export default function Navbar({ fixed }) {
                             type="button"
                             onClick={() => setNavbarOpen(!navbarOpen)}
                         >
-                            <FontAwesomeIcon icon="fa-solid fa-bars" style={{color: "#000000",}} />
+                            <FontAwesomeIcon icon="fa-solid fa-bars" style={{ color: "#000000", }} />
                         </button>
                     </div>
                     <div
@@ -61,22 +61,21 @@ export default function Navbar({ fixed }) {
                         id="example-navbar-danger"
                     >
                         <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-  {navlinks.map((item, index) => (
-    <li key={item.id} className="nav-item">
-      <a
-        className={`relative right-5 md:px-5 py-2 flex items-center font-semibold leading-snug text-black hover:opacity-75 ${
-          index === navlinks.length - 1
-            ? ' right-[9.9px]  border-2 border-[#0052FE] text-[#0052FE] rounded-lg justify-center relative md:right-[0px] md:ml-6'
-            : ''
-        }`}
-        href="/"
-      >
-        <i className="fab fa-facebook-square text-lg leading-lg text-black opacity-75"></i>
-        <span className="ml-2 text-[14px] ">{item.title}</span>
-      </a>
-    </li>
-  ))}
-</ul>
+                            {navlinks.map((item, index) => (
+                                <li key={item.id} className="nav-item">
+                                    <a
+                                        className={`relative right-5 md:px-5 py-2 flex items-center font-semibold leading-snug text-black hover:opacity-75 ${index === navlinks.length - 1
+                                                ? ' right-[9.9px]  border-2 border-[#0052FE] text-[#0052FE] rounded-lg justify-center relative md:right-[0px] md:ml-6'
+                                                : ''
+                                            }`}
+                                        href="/"
+                                    >
+                                        <i className="fab fa-facebook-square text-lg leading-lg text-black opacity-75"></i>
+                                        <span className="ml-2 text-[14px] ">{item.title}</span>
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
 
                     </div>
                 </div>

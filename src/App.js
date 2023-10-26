@@ -1,6 +1,7 @@
 import './App.css';
 import Navabar from './component/Navabar';
 import CryptoCalc from './component/CryptoCalc';
+import Faq from './component/Faq';
 //import Footer from './component/Footer';
 function App() {
   return (
@@ -26,12 +27,12 @@ function App() {
         </div>
       </div> */}
       <Navabar />
-      <div className="flex flex-col w-[100vh] h-[100vh] md:flex-row md:w-full ">
-        <div className="w-full h-[100vh] pt-[5vh] pl-[6vh] md:ml-[6vh] md:rounded-md ">
-          <div className="bg-red-600 h-auto"><CryptoCalc /></div>
-          <div className="bg-blue-600 h-[100vh]">2</div>
+      <div className="flex flex-col w-[95vw] h-[100vh] ml-1 md:flex-row md:w-full ">
+        <div className="w-full h-[100vh] pt-[5vh]  md:ml-[6vh] md:rounded-md ">
+          <div id='1'className="bg-white rounded-md py-3 h-auto "><CryptoCalc /></div>
+          <div id='2' className="bg-white rounded-md my-5 h-auto"><Faq /></div>
         </div>
-        <div className="bg-green-600 h-[100vh] ml-[6vh] md:mt-[5vh] md:w-[60vh] md:mr-[10vh] md:sticky md:top-[5vh]  ">3</div>
+        <div id='3' className="bg-green-600 hidden md:block h-[100vh] ml-[6vh] md:mt-[5vh] md:w-[60vh] md:mr-[10vh] md:sticky md:top-[5vh]  "></div>
       </div>
 
 
