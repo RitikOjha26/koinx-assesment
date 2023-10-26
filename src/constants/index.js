@@ -1,31 +1,30 @@
-import Taxtable from '../assets/images/table.png';
 export const INCOME_RANGES = [
     {
-        id: 0,
+        id: 1,
         range: "$0 - $18,200",
         taxRate: "0%",
         Trate: 0,
     },
     {
-        id: 1,
+        id: 2,
         range: "$18,201 - $45,000",
         taxRate: "Nil + 19% of excess over $18,200",
         Trate: 0.19,
     },
     {
-        id: 2,
+        id: 3,
         range: "$45,001 - $120,000",
         taxRate: "$5,092 + 32.5% of excess over $45,000",
         Trate: 0.325,
     },
     {
-        id: 3,
+        id: 4,
         range: "$120,001 - $180,000",
         taxRate: "$29,467 + 37% of excess over $120,000",
         Trate: 0.37,
     },
     {
-        id: 4,
+        id: 5,
         range: "$180,001+",
         taxRate: "$51,667 + 45% of excess over $180,000",
         Trate: 0.45,
@@ -93,11 +92,11 @@ export const QNA = [
             Here are the top 6 stratergies for lowering your cryptocurrency taxes in Australia:
             <ul className='list-disc pl-4 pt-2'>
                 <li><span className='font-bold'>Hold over for 12 months-</span>Hold your crypto for more than 12 months to qualify for a 50% long-term CGT discount to reduce your tax liability.</li>
-                <li>Offset gains with losses- Offset capital gains with capital losses from cryptocurrency, reducing your overall tax burden.</li>
-                <li>Claim tax deductions- Explore opportunities to claim significant deductions on your regular income if you're a trader or running a crypto business.</li>
-                <li>Use crypto tax tools- Employ crypto tax software like KoinX or seek help from a crypto tax specialist to streamline calculations and ensure compliance.</li>
-                <li>Donate to charities- Donate cryptocurrency to registered charities since it’s not a taxable event, and claim deductions on the donated amount.</li>
-                <li>Full disclosure- Be transparent and disclose all your crypto transactions to the ATO to avoid penalties for hiding trading activities.</li>
+                <li><span className='font-bold'>Offset gains with losses-</span> Offset capital gains with capital losses from cryptocurrency, reducing your overall tax burden.</li>
+                <li><span className='font-bold'>Claim tax deductions-</span> Explore opportunities to claim significant deductions on your regular income if you're a trader or running a crypto business.</li>
+                <li><span className='font-bold'>Use crypto tax tools-</span> Employ crypto tax software like KoinX or seek help from a crypto tax specialist to streamline calculations and ensure compliance.</li>
+                <li><span className='font-bold'>Donate to charities-</span> Donate cryptocurrency to registered charities since it’s not a taxable event, and claim deductions on the donated amount.</li>
+                <li><span className='font-bold'>Full disclosure-</span> Be transparent and disclose all your crypto transactions to the ATO to avoid penalties for hiding trading activities.</li>
             </ul>
 
         </p>
@@ -183,45 +182,66 @@ export const QNA = [
             </p>
             <span>ATO Individual Tax Rates 2022-2023</span>
             <table className="w-full text-center border border-gray-700">
-  <thead className='border border-gray-700'>
-    <tr >
-      <th className="border border-gray-700 px-2 py-2">Income</th>
-      <th className="border border-gray-700 px-2 py-2">Tax Rate</th>
-    </tr>
-  </thead>
-  <tbody className='border border-gray-700'>
-    <tr>
-      <td className="border border-gray-700 px-2 py-2">$0-$18,200</td>
-      <td className="border border-gray-700 px-2 py-2">0%</td>
-    </tr>
-    <tr>
-      <td className="border border-gray-700 px-2 py-2">$18,201-$45,000</td>
-      <td className="border border-gray-700 px-2 py-2">Nil 19% of the excess over $18,200</td>
-    </tr>
-    <tr>
-      <td className="border border-gray-700 px-2 py-2">$45,001-$120,000</td>
-      <td className="border border-gray-700 px-2 py-2">$5,092 + 32.5% of the excess over $45,000</td>
-    </tr>
-    <tr>
-      <td className="border border-gray-700 px-2 py-2">$120,001-$180,000</td>
-      <td className="border border-gray-700 px-2 py-2">$29,467 + 37% of the excess over $120,000</td>
-    </tr>
-    <tr>
-      <td className="border border-gray-700 px-2 py-2">$180,001+</td>
-      <td className="border border-gray-700 px-2 py-2">$51,667 + 45% of the excess over $180,000</td>
-    </tr>
-  </tbody>
-</table>
+                <thead className='border border-gray-700'>
+                    <tr >
+                        <th className="border border-gray-700 px-2 py-2">Income</th>
+                        <th className="border border-gray-700 px-2 py-2">Tax Rate</th>
+                    </tr>
+                </thead>
+                <tbody className='border border-gray-700'>
+                    <tr>
+                        <td className="border border-gray-700 px-2 py-2">$0-$18,200</td>
+                        <td className="border border-gray-700 px-2 py-2">0%</td>
+                    </tr>
+                    <tr>
+                        <td className="border border-gray-700 px-2 py-2">$18,201-$45,000</td>
+                        <td className="border border-gray-700 px-2 py-2">Nil 19% of the excess over $18,200</td>
+                    </tr>
+                    <tr>
+                        <td className="border border-gray-700 px-2 py-2">$45,001-$120,000</td>
+                        <td className="border border-gray-700 px-2 py-2">$5,092 + 32.5% of the excess over $45,000</td>
+                    </tr>
+                    <tr>
+                        <td className="border border-gray-700 px-2 py-2">$120,001-$180,000</td>
+                        <td className="border border-gray-700 px-2 py-2">$29,467 + 37% of the excess over $120,000</td>
+                    </tr>
+                    <tr>
+                        <td className="border border-gray-700 px-2 py-2">$180,001+</td>
+                        <td className="border border-gray-700 px-2 py-2">$51,667 + 45% of the excess over $180,000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+
+            <span className='pt-4 font-bold text-gray-700'>Capital Gains Tax (CGT)</span>
+            <p className='py-2'>
+                Calculate your capital gains or losses on cryptocurrency transactions using this formula:
+            </p>
+            <span className='font-bold text-gray-700 '>Capital Gain/Loss = Capital Proceeds - Cost Basis
+            </span>
+            <br />
+            <br />
+            <p>
+                <span className='font-bold text-gray-700 leading-8 '>
+                    Note: 
+                    <br />
+                    Capital Proceeds (sale value or any form of receipt) <br />
+                    Cost Basis (costs incurred to acquire, hold, and dispose of the asset) <br />
+                </span>
+                <br />
+
+                Your tax rate depends on whether you held the cryptocurrency for more than 12 months (long-term) or less (short-term). Long-term gains receive a 50% discount.
+
+                Calculate your Australian crypto taxes accurately and effortlessly with KoinX's free crypto tax calculator for Australia. It simplifies the process, ensuring compliance with the latest tax rates and regulations making crypto tax calculations easy and precise.
+
+            </p>
+            <br />
 
 
 
         </p>,
     },
-    {
-        id: 13,
-        Question: <p></p>,
-        Answer: <p></p>,
-    },
+    
 
 
 ];

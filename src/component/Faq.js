@@ -3,7 +3,7 @@ import { QNA } from '../constants';
 
 const Faq = () => {
     return (
-        <div className='px-5 py-10 text-left '>
+        <div className='px-5 pt-10 text-left leading-7'>
             <div className=" font-bold pb-10 text-2xl text-gray-700 ">
                 
                     Frequently Asked Questions
