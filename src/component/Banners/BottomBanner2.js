@@ -6,25 +6,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const BottomBanner2 = () => {
     return (
 
-        <div class="w-screen h-[70vh] flex  justify-center items-center bg-white mt-24">
+        <div class="w-auto h-[70vh] flex  justify-center items-center bg-white mt-24">
 
             {/* <!-- Parent div with 100vw width and margin bg-[#0052FE]--> */}
             <div class="w-[85vw] h-[45vh]  rounded-3xl bg-[#0052FE]   z-10 flex flex-row ">
-                <div className="flex m-auto p-[2rem] items-center justify-center gap-[3rem] w-auto h-auto ">
+                <div className="flex m-auto p-[2rem] items-center  gap-[3rem] w-auto h-auto ">
 
-                    <img src={Banner1} alt="Banner2" className='h-[200px] w-[200px] relative   ' />
-                    <div className="  w-auto flex flex-col justify-between content-center    ">
+                    <img src={Banner1} alt="Banner2" className='h-[200px] w-auto relative   ' />
+                    <div className="  w-auto flex flex-col  content-center  whitespace-pre-line  ">
 
-                        <h1 className=' text-[1.4rem] flex  font-bold text-white pb-4 '>Stay up to date with latest crypto news and events. Subscribe to our newsletter</h1>
-                        <div className="flex flex-row">
+                        <h1 className=' text-[1.4rem] flex  font-bold text-white pb-4 '>Stay up to date with latest crypto news <br /> and events. Subscribe to our newsletter</h1>
+                        <div className="flex flex-row h-auto w-full">
                             <input
                                 type="email"
                                 className="block h-[7vh] w-[16rem] px-4  mr-2 rounded leading-tight bg-gray-200 text-gray-700 border focus:outline-none focus:bg-white focus:border-gray-500"
                                 placeholder="Enter your Email Address"
 
                             />
-                            <button className='bg-[#FFB800] text-black font-medium  h-[7vh] w-[12rem] rounded-md'>
-                                <span className=' text-xl'>Suscribe</span>
+                            <button className='bg-[#FFB800] text-black font-medium  h-auto w-full rounded-md'>
+                                <span className=' text-[1rem]'>Suscribe &nbsp;</span>
                                 <FontAwesomeIcon icon={faArrowRight} className='ml-auto' />
                             </button>
                         </div>

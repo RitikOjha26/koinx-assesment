@@ -1,3 +1,33 @@
+export const NAVLINKS = [
+    {
+        id: 1,
+        title: "Features",
+    },
+    {
+        id: 2,
+        title: "Exchanges",
+    },
+    {
+        id: 3,
+        title: "How it works?",
+    },
+    {
+        id: 4,
+        title: "Blog",
+    },
+    {
+        id: 5,
+        title: "About Us",
+    },
+    {
+        id: 6,
+        title: "Sign In",
+    },
+]
+
+
+
+
 export const INCOME_RANGES = [
     {
         id: 1,
@@ -181,33 +211,33 @@ export const QNA = [
 
             </p>
             <span>ATO Individual Tax Rates 2022-2023</span>
-            <table className="w-full text-center border border-gray-700">
-                <thead className='border border-gray-700'>
-                    <tr >
-                        <th className="border border-gray-700 px-2 py-2">Income</th>
-                        <th className="border border-gray-700 px-2 py-2">Tax Rate</th>
+            <table className=" w-full sm:w-1/2 text-center border text-gray-500 border-gray-500 my-3">
+                <thead className='border border-gray-500'>
+                    <tr className="text-[#0B1426]">
+                        <th className="border border-gray-500 px-2 py-2 text-bold">Income</th>
+                        <th className="border border-gray-500 px-2 py-2 text-bold">Tax Rate</th>
                     </tr>
                 </thead>
-                <tbody className='border border-gray-700'>
+                <tbody className='border border-gray-500'>
                     <tr>
-                        <td className="border border-gray-700 px-2 py-2">$0-$18,200</td>
-                        <td className="border border-gray-700 px-2 py-2">0%</td>
+                        <td className="border border-gray-500 px-2 py-2">$0-$18,200</td>
+                        <td className="border border-gray-500 px-2 py-2">0%</td>
                     </tr>
                     <tr>
-                        <td className="border border-gray-700 px-2 py-2">$18,201-$45,000</td>
-                        <td className="border border-gray-700 px-2 py-2">Nil 19% of the excess over $18,200</td>
+                        <td className="border border-gray-500 px-2 py-2">$18,201-$45,000</td>
+                        <td className="border border-gray-500 px-2 py-2">Nil 19% of the excess over $18,200</td>
                     </tr>
                     <tr>
-                        <td className="border border-gray-700 px-2 py-2">$45,001-$120,000</td>
-                        <td className="border border-gray-700 px-2 py-2">$5,092 + 32.5% of the excess over $45,000</td>
+                        <td className="border border-gray-500 px-2 py-2">$45,001-$120,000</td>
+                        <td className="border border-gray-500 px-2 py-2">$5,092 + 32.5% of the excess over $45,000</td>
                     </tr>
                     <tr>
-                        <td className="border border-gray-700 px-2 py-2">$120,001-$180,000</td>
-                        <td className="border border-gray-700 px-2 py-2">$29,467 + 37% of the excess over $120,000</td>
+                        <td className="border border-gray-500 px-2 py-2">$120,001-$180,000</td>
+                        <td className="border border-gray-500 px-2 py-2">$29,467 + 37% of the excess over $120,000</td>
                     </tr>
                     <tr>
-                        <td className="border border-gray-700 px-2 py-2">$180,001+</td>
-                        <td className="border border-gray-700 px-2 py-2">$51,667 + 45% of the excess over $180,000</td>
+                        <td className="border border-gray-500 px-2 py-2">$180,001+</td>
+                        <td className="border border-gray-500 px-2 py-2">$51,667 + 45% of the excess over $180,000</td>
                     </tr>
                 </tbody>
             </table>

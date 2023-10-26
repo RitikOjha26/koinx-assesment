@@ -3,36 +3,12 @@ import Logo from '../assets/images/logob.svg';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {NAVLINKS} from '../constants/index';
 
 library.add(faBars);
 export default function Navbar({ fixed }) {
 
-    const navlinks = [
-        {
-            id: 1,
-            title: "Features",
-        },
-        {
-            id: 2,
-            title: "Exchanges",
-        },
-        {
-            id: 3,
-            title: "How it works?",
-        },
-        {
-            id: 4,
-            title: "Blog",
-        },
-        {
-            id: 5,
-            title: "About Us",
-        },
-        {
-            id: 5,
-            title: "Sign In",
-        },
-    ]
+    
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
         <>
@@ -61,10 +37,10 @@ export default function Navbar({ fixed }) {
                         id="example-navbar-danger"
                     >
                         <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-                            {navlinks.map((item, index) => (
+                        {NAVLINKS.map((item, index) => (
                                 <li key={item.id} className="nav-item">
                                     <a
-                                        className={`relative right-5 md:px-5 py-2 flex items-center font-semibold leading-snug text-black hover:opacity-75 ${index === navlinks.length - 1
+                                        className={`relative right-5 md:px-5 py-2 flex items-center font-semibold leading-snug text-black hover:opacity-75 ${index === NAVLINKS.length - 1
                                                 ? ' right-[9.9px]  border-2 border-[#0052FE] text-[#0052FE] rounded-lg justify-center relative md:right-[0px] md:ml-6'
                                                 : ''
                                             }`}

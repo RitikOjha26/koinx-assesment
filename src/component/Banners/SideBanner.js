@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Banner1 from '../assets/images/Frame1.jpg'
+import Banner1 from '../../assets/images/Frame1.jpg'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
