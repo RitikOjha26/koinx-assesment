@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const BottomBanner_Phone = () => {
     return (
-        <div className='h-[45vh] w-[90vw] bg-[#0052FE]  rounded-[25px] text-white relative '>
+        <div className='h-auto w-[90vw] bg-[#0052FE]  rounded-[25px] text-white relative '>
             
             <img className='align-center px-[105px] py-8 ' src={Banner1} alt="Banner" />
             <div className='py-[1px] px-[16px] text-center'>
@@ -20,7 +20,7 @@ const BottomBanner_Phone = () => {
             <button className='items-center bg-white text-black font-medium my-3 ml-[55px] w-[60vw] h-[5vh] rounded-md'>
                     Sign up at KoinX for free
 
-                    <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
+                    <FontAwesomeIcon icon={faArrowRight} className='ml-auto' />
                 </button>
 
         </div>

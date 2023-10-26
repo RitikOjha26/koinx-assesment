@@ -265,8 +265,8 @@ const Footer = () => {
               >Media and Press</a>
             </p>
             <p className='mb-4'>
-              <a href='/'  className="text-white text-opacity-60 cursor-pointer hover:underline "
-              >Careers <button className='bg-blue-600 rounded-sm'>Were're Hiring</button></a>
+              <a href='/'  className="text-white text-opacity-60 cursor-pointer "
+              >Careers <button className='bg-blue-600 text-white hover:underline rounded-sm'>Were're Hiring</button></a>
             </p>
             <p className="mb-4">
               <a href='/' className="text-white text-opacity-60 cursor-pointer hover:underline "

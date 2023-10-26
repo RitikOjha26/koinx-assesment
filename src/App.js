@@ -28,13 +28,13 @@ function App() {
       </div>
 
 
-      {/* <div className='px-5  sm:hidden  '>
+      <div className='px-5 h-auto  sm:hidden  '>
         <BottomBanner1 />
       </div>
       <div className='relative hidden md:block md:w-full'>
         <BottomBanner2 />
         
-      </div> */}
+      </div>
     
 
       <Footer />
