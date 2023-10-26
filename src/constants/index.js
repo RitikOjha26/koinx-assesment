@@ -88,7 +88,7 @@ export const QNA = [
     {
         id: 4,
         Question: <p>How do i lower my cryptocurrency taxes?</p>,
-        Answer: <p>
+        Answer: <div>
             Here are the top 6 stratergies for lowering your cryptocurrency taxes in Australia:
             <ul className='list-disc pl-4 pt-2'>
                 <li><span className='font-bold'>Hold over for 12 months-</span>Hold your crypto for more than 12 months to qualify for a 50% long-term CGT discount to reduce your tax liability.</li>
@@ -99,7 +99,7 @@ export const QNA = [
                 <li><span className='font-bold'>Full disclosure-</span> Be transparent and disclose all your crypto transactions to the ATO to avoid penalties for hiding trading activities.</li>
             </ul>
 
-        </p>
+        </div>
     },
     {
         id: 5,
@@ -143,7 +143,7 @@ export const QNA = [
     {
         id: 11,
         Question: <p>How do I use a cryptocurrency tax calculator?</p>,
-        Answer: <p>
+        Answer: <div>
             In order to use a cryptocurrency tax calculator, you need to input information about your cryptocurrency transactions. After you enter your information, the cryptocurrency tax calculator will calculate the gain or loss on every transaction.
             <br />
             This includes:
@@ -166,12 +166,12 @@ export const QNA = [
                 </a>{' '}
 
             </p>
-        </p>,
+        </div>,
     },
     {
         id: 12,
         Question: <p>How do I calculate my crypto tax in Australia?</p>,
-        Answer: <p>
+        Answer: <div>
             To calculate your crypto tax in Australia accurately, you need to consider both income tax and capital gains tax.
             <br />
             <p className='py-3'>
@@ -239,7 +239,7 @@ export const QNA = [
 
 
 
-        </p>,
+        </div>,
     },
     
 

@@ -11,8 +11,10 @@ const Faq = () => {
             </div>
             {QNA.map((item) => (
                 <div key={item.id}>
-                    <p className='font-semibold flex text-[20px] text-[#0b1426] text-opacity-90 pb-[10px]'><span className='hidden sm:block'>{item.id}.</span>{item.Question}</p>
-                    <p className='text-[16px]'>{item.Answer}</p>
+                    <div className='font-semibold flex text-[20px] text-[#0b1426] text-opacity-90 pb-[10px]'>
+                        <span className='hidden sm:block'>{item.id}.</span>{item.Question}
+                        </div>
+                    <div className='text-[16px]'>{item.Answer}</div>
                     <hr className='bg-black my-[15px]  '/>             
                 </div>
                 
