@@ -265,14 +265,14 @@ const CryptoTaxCalculator = () => {
                         </div>
                     )}
                     <div className='w-[100%] md:flex px-3 '>
-                        <div className='w-full pl-0 mb-6 md:w-1/2 md:mb-0 md:mt-6'>
-                            <div className='block w-full px-4 py-3 bg-gray-200 text-gray-700 border rounded leading-tight focus:outline-none focus:bg-white'>
+                        <div className='w-full px-1 mb-6 md:w-1/2 md:mb-1 md:mt-6 md:mr-[2rem] '>
+                            <div className=' block w-full  px-2 py-3 md:px-6 bg-gray-200 text-gray-700 border rounded leading-tight focus:outline-none focus:bg-white'>
                                 <h1 className='align-center text-center'>Net capital gains amount</h1>
-                                <h1 className='pt-1 align-center text-center font-bold items-center text-[#0FBA83]  '>${netCapitalGain}</h1>
+                                <h1 className=' pt-1 align-center text-center font-bold items-center text-[#0FBA83]  '>${netCapitalGain}</h1>
                             </div>
                         </div>
-                        <div className='w-full px-1 mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0 '>
-                            <div className='block w-full px-4 py-3 bg-gray-200 text-gray-700 border rounded leading-tight focus:outline-none focus:bg-white'>
+                        <div className='w-full px-1  mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0 '>
+                            <div className='block w-full px-4 py-3  bg-gray-200 text-gray-700 border rounded leading-tight focus:outline-none focus:bg-white'>
                                 <h1 className='align-center text-center '>Tax you need to pay</h1>
                                 <h1 className='pt-1 align-center text-center font-bold items-center text-[#0141CF] '>${payableTax}</h1>
                             </div>
