@@ -219,7 +219,7 @@ const CryptoTaxCalculator = () => {
                                 type="button"
                                 id='longTerm'
                                 onClick={() => { handleButtonClick(true); }}
-                                className={`whitespace-nowrap md:whitespace-normal flex gap-4 mt-2 w-full md:w-[100%] py-3 px-4 rounded leading-tight bg-[#EFF2F5] border-2  ${isLongTerm ? 'text-blue-700 border-blue-600 focus:border-blue-600' : 'border-gray-200 focus:border-gray-500 text-[#0F1629]'}`}>
+                                className={` whitespace-nowrap md:whitespace-normal flex justify-between mt-2  w-full md:w-[100%] mr-4 py-3 px-4 rounded leading-tight bg-[#EFF2F5] border-2  ${isLongTerm ? 'text-blue-700 border-blue-600 focus:border-blue-600' : 'border-gray-200 focus:border-gray-500 text-[#0F1629]'}`}>
                                 Long Term <FontAwesomeIcon icon={faCheck} className={`${isLongTerm ? 'text-blue-600 outline-blue-600 text-xl' : 'opacity-0 '}`} />
                             </button>
                             <span className=' mt-[1px] text-[15px] text-[#3E424A]'>{"> 12 months"} </span>
