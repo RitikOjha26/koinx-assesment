@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+<h1 align="center">KoinX Assignment 👋</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created an copy of figma design as a website for the Frontend Assignment.
 
-## Available Scripts
+### 🌐  Live at: [KoinX Assignment](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
-In the project directory, you can run:
+## Made with
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%231a202c.svg?style=for-the-badge&logo=tailwind-css&logoColor=%2361dafb)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-### `npm start`
+## ⚙️ To run it on your local machine:
+1. Fork the repository.
+2. Clone it using `git clone`
+3. Enter the cloned directory using `cd koinx-test`
+4. Run `npm install`
+5. Start the local development server using `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 👤 Author
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Ritik Ojha**
 
-### `npm test`
+* Website: [Portfolio](https://ritik-pf.vercel.app/)
+* Github: [@RitikOjha26](https://github.com/RitikOjha26)
+* LinkedIn: [@Ritik-ojha](https://www.linkedin.com/in/ritik-ojha/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## ✨ Project Screenshots
+![ProjSnapshot1](https://github.com/RitikOjha26/koinx-assesment/assets/144144477/5ed8f29c-f0a0-41e5-8cfb-f145e7c85d1f)
+![ProjectSnapshot2](https://github.com/RitikOjha26/koinx-assesment/assets/144144477/2f38afb4-3ee9-4a8f-a572-8e542a2a337d)
+![ProjectSnapshot3](https://github.com/RitikOjha26/koinx-assesment/assets/144144477/90099309-1e24-4832-9367-2a74e0fc1de4)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Perfromance 
+![Screenshot 2023-10-27 053826](https://github.com/RitikOjha26/koinx-assesment/assets/144144477/57de5daa-04bf-4018-9a7c-35352bd01ba1)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⭐️ Star
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Give a ⭐️ if this project helped you!
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+***
