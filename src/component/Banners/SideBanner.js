@@ -13,8 +13,10 @@ const SideBanner = () => {
 
                 <span className=' text-[0.9rem] text-center text-semibold'>With our range of features that you can equip for free,
                     KoinX allows you to be more educated and aware of your tax reports.</span>
-                    <img className=' lg:block m-auto py-5 item-centre mx-auto' src={Banner1} alt="Banner" />
-                    <button className='bg-white text-black font-medium w-[18vw] h-[7vh] rounded-md'>
+                    <img className=' lg:block m-auto py-5 item-centre mx-auto' src={Banner1} alt="Banner"  />
+                    <button 
+                    id='introkoinx'
+                    className='bg-white text-black font-medium w-[18vw] h-[7vh] rounded-md'>
                         Get Started for FREE
                         <FontAwesomeIcon icon={faArrowRight} className='ml-auto' />
                     </button>

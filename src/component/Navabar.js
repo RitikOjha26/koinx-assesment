@@ -22,6 +22,7 @@ export default function Navbar({ fixed }) {
                             <img className='relative right-[12px] md:left-[10px]' src={Logo} alt="LOGO" />
                         </a>
                         <button
+                            id="dropdownbtn"
                             className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                             type="button"
                             onClick={() => setNavbarOpen(!navbarOpen)}

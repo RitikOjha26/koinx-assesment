@@ -84,21 +84,21 @@ const CryptoTaxCalculator = () => {
                     <div className="flex w-full">
                         <div className="w-1/2 px-3 mb-6 md:w-2/4 md:mb-0">
                             <label className="block mb-2 text-xs font-bold text-gray-700">
-                                Financial Year:
+                                Financial Year
                             </label>
                             <div className="relative">
-                                <select id="grid-state" className="block w-full px-4 py-3 rounded-[0.3rem] leading-tight bg-gray-200 border border-gray-200 text-gray-700 focus:outline-none focus:bg-white focus:border-gray-500">
+                                <select id="FinY" className="block w-full px-4 py-3 rounded-[0.3rem] leading-tight bg-gray-200 border border-gray-200 text-gray-700 focus:outline-none focus:bg-white focus:border-gray-500">
                                     <option>FY 2023-24</option>
                                 </select>
                             </div>
                         </div>
                         <div className="w-1/2 px-3 mb-6 md:w-2/4 md:mb-0">
                             <label className="block mb-2 text-xs font-bold text-gray-700 tracking-wide">
-                                Country:
+                                Country
                             </label>
                             <div className="relative">
-                                <select id="grid-state" className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 border border-gray-200 text-gray-700 focus:outline-none focus:bg-white focus:border-gray-500">
-                                    <option><img src={Flag} alt="Flag" />Australia</option>
+                                <select id="Country" className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 border border-gray-200 text-gray-700 focus:outline-none focus:bg-white focus:border-gray-500">
+                                    <option><img src={Flag} alt="Flag"  />Australia</option>
                                 </select>
                             </div>
                         </div>
@@ -108,10 +108,11 @@ const CryptoTaxCalculator = () => {
                     </div>
                     <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0">
                         <label htmlFor="grid-first-name" className="block mb-2 text-xs font-bold text-gray-700 tracking-wide">
-                            Enter purchase price of Crypto:
+                            Enter purchase price of Crypto
                         </label>
                         <input
                             type="text"
+                            
                             id="grid-first-name"
                             className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 text-gray-700 border focus:outline-none focus:bg-white focus:border-gray-500"
                             placeholder="$10000"
@@ -120,35 +121,36 @@ const CryptoTaxCalculator = () => {
                     </div>
                     <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0">
                         <label htmlFor="grid-last-name" className="block mb-2 text-xs font-bold text-gray-700 tracking-wide">
-                            Enter sale price of Crypto:
+                            Enter sale price of Crypto
                         </label>
                         <input
                             type="text"
                             id="grid-last-name"
                             className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 text-gray-700 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
-                            placeholder="$10000"
+                            placeholder="$20000"
                             onChange={(e) => { setSalePrice(e.target.value) }}
                         />
                     </div>
                     <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0">
                         <label className="block mb-2 text-xs font-bold text-gray-700 tracking-wide">
-                            Enter your expenses:
+                            Enter your expenses
                         </label>
                         <input
                             type="text"
                             id="grid-first-name"
                             className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 text-gray-700 border focus:outline-none focus:bg-white"
-                            placeholder="$10000"
+                            placeholder="$30000"
                             onChange={(e) => { setExpenses(e.target.value) }}
                         />
                     </div>
                     <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0">
                         <label className="block text-xs font-bold text-gray-700 tracking-wide">
-                            Select Investment Type:
+                            Select Investment Type
                         </label>
                         <div className='flex md:flex'>
                             <button
                                 type="button"
+                                id='shortTerm'
                                 onClick={() => { handleButtonClick(false); }}
                                 className={`mt-2 block w-[50vw] md:w-[50%] mr-4 py-3 px-4 rounded leading-tight bg-gray-200 border-2 ${isShortTerm? 'text-blue-700 border-blue-600 focus:border-blue-600' : 'border-gray-200 focus:border-gray-500 text-gray-700 '}`}>
                                 Short Term <FontAwesomeIcon icon={faCheck} className={`${isShortTerm? 'text-blue-600 border-blue-600 text-xl px-[1rem]' : 'hidden '}`} />
@@ -156,19 +158,20 @@ const CryptoTaxCalculator = () => {
                             </button>
                             <button
                                 type="button"
+                                id='longTerm'
                                 onClick={() => { handleButtonClick(true); }}
-                                className={`mt-2 block w-[50vw] md:w-[50%] mr-4 py-3 px-4 rounded leading-tight bg-gray-200 border-2  ${isLongTerm ? 'text-blue-700 border-blue-600 focus:border-blue-600' : 'border-gray-200 focus:border-gray-500 text-gray-700'}`}>
+                                className={`mt-2 block w-[50vw] md:w-[50%] py-3 px-4 rounded leading-tight bg-gray-200 border-2  ${isLongTerm ? 'text-blue-700 border-blue-600 focus:border-blue-600' : 'border-gray-200 focus:border-gray-500 text-gray-700'}`}>
                                 Long Term <FontAwesomeIcon icon={faCheck} className={`${isLongTerm? 'text-blue-600 border-blue-600 text-xl px-[1rem]' : 'hidden '}`} />
                             </button>
                         </div>
                     </div>
                     <div className="w-[100%] px-3 mb-6 md:w-[100%] md:mb-0 md:mt-6">
                         <label className="pb-2 block text-xs font-bold tracking-wide text-gray-700 md:mb-2">
-                            Select your Annual Income:
+                            Select your Annual Income
                         </label>
                         <div className='md:flex'>
                             <div className="relative h-auto md:flex md:w-[49%] mr-6  ">
-                                <select id="grid-state" className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 border border-gray-200 text-gray-700 focus:outline-none focus:bg-white focus:border-gray-500" value={annualIncome} onChange={handleTaxRateChange}>
+                                <select id="IncomeRange" className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 border border-gray-200 text-gray-700 focus:outline-none focus:bg-white focus:border-gray-500" value={annualIncome} onChange={handleTaxRateChange}>
                                     {INCOME_RANGES.map(item => (
                                         <option key={item.id}>{item.range}</option>
                                     ))}
@@ -185,7 +188,7 @@ const CryptoTaxCalculator = () => {
                         <div className="flex flex-col md:flex-row mb-2 w-full  ">
                             <div className="w-full px-3  mb-6  md:mb-0 md:mt-6">
                                 <label className="block text-xs font-bold tracking-wide text-gray-700">
-                                    Capital gains Amount:
+                                    Capital gains Amount
                                 </label>
                                 <input
                                     type="text"
@@ -196,7 +199,7 @@ const CryptoTaxCalculator = () => {
                             </div>
                             <div className="w-full px-3 mb-6  md:mb-0 md:mt-6 sm:mt-0">
                                 <label className="block text-xs font-bold tracking-wide text-gray-700">
-                                    discount for long term gains:
+                                    discount for long term gains
                                 </label>
                                 <input
                                     type="text"
@@ -208,7 +211,7 @@ const CryptoTaxCalculator = () => {
                         </div>
                     )}
                     <div className='w-[100%] md:flex px-3 '>
-                        <div className='w-full px-1 mb-6 md:w-1/2 md:mb-0 md:mt-6'>
+                        <div className='w-full pl-0 mb-6 md:w-1/2 md:mb-0 md:mt-6'>
                             <div className='block w-full px-4 py-3 bg-gray-200 text-gray-700 border rounded leading-tight focus:outline-none focus:bg-white'>
                                 <h1 className='align-center text-center'>Net capital gains amount</h1>
                                 <h1 className='pt-1 align-center text-center font-bold items-center text-[#0FBA83]  '>${netCapitalGain}</h1>

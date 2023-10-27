@@ -15,7 +15,7 @@ const Footer = () => {
       <div
         className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
-          <img src={Logo} alt="Logo" className=''/>
+          <img src={Logo} alt="Logo" className='' />
         </div>
         {/* <!-- Social network icons container --> */}
         <div className="flex justify-center">
