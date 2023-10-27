@@ -31,7 +31,8 @@ Created an copy of figma design as a website for the Frontend Assignment.
 ![ProjectSnapshot3](https://github.com/RitikOjha26/koinx-assesment/assets/144144477/90099309-1e24-4832-9367-2a74e0fc1de4)
 
 ## 🚀 Perfromance 
-![Screenshot 2023-10-27 053826](https://github.com/RitikOjha26/koinx-assesment/assets/144144477/57de5daa-04bf-4018-9a7c-35352bd01ba1)
+![Screenshot 2023-10-27 053826](https://github.com/RitikOjha26/koinx-assesment/assets/144144477/ec0e4fa9-211c-4d50-a43c-462866b197b3)
+
 
 ## ⭐️ Star
 
