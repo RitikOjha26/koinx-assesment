@@ -2,7 +2,6 @@
 
 Created an copy of figma design as a website for the Frontend Assignment.
 
-### 🌐  Live at: [KoinX Assignment](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Made with
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
