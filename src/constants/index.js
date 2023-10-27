@@ -133,7 +133,7 @@ export const QNA = [
     },
     {
         id: 5,
-        Question: <p>Can the ATO track Crypto</p>,
+        Question: <p>Can the ATO track Crypto?</p>,
         Answer: <p>
             The Australian Taxation Office (ATO) possesses strong tracking capabilities for cryptocurrency transactions. Since 2014, they've been gathering data on crypto activities, including KYC info from exchanges and wallets. The ATO's data matching program, active since 2019, lets them access data from service providers like Binance and CoinJar, covering personal details and transaction specifics. Since 2020, the ATO has been notifying Australian crypto investors to report holdings to avoid penalties.
 
@@ -141,7 +141,7 @@ export const QNA = [
     },
     {
         id: 6,
-        Question: <p>What is the best tax calculator for crypto in Australia</p>,
+        Question: <p>What is the best tax calculator for crypto in Australia?</p>,
         Answer: <p>KoinX is a crypto tax platform that makes it easy to calculate tax on crypto transactions. It also provides portfolio insights of all crypto exchange accounts combined, making it a valuable tool for chartered accountants and VDA Investors alike.
         </p>
     },
@@ -154,13 +154,13 @@ export const QNA = [
     },
     {
         id: 8,
-        Question: <p>Is using a Crypto tax calculator safe</p>,
+        Question: <p>Is using a Crypto tax calculator safe?</p>,
         Answer: <p>KoinX provides a reliable crypto tax calculator that can assist you in determining your tax obligations for cryptocurrency transactions. This tool accurately tracks your portfolio on your preferred exchange and computes your gains or losses based on the crypto amounts and prices involved.
         </p>
     },
     {
         id: 9,
-        Question: <p>What exchanges do you Support</p>,
+        Question: <p>What exchanges do you Support?</p>,
         Answer: <p>KoinX seamlessly integrates with a wide array of exchanges, including Binance, CoinSpot, MEXC, Bybit, Coinbase, Kraken, and numerous others. It effortlessly consolidates cryptocurrency transactions from over 180+ chains, exchanges, and wallets, presenting them in a user-friendly unified dashboard.
         </p>
     },

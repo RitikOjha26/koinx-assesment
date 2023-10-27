@@ -11,7 +11,7 @@ library.add(faAngellist);
 const Footer = () => {
   return (
     <footer
-      className="w-screen mt-11 bg-[#02042B] text-center text-blue-500   lg:text-left md:px-28">
+      className="mt-11 bg-[#02042B] text-center text-blue-500   lg:text-left md:px-28">
       <div
         className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
@@ -255,7 +255,7 @@ const Footer = () => {
 
       {/* <!--Copyright section--> */}
       <div className="text-white text-opacity-60  p-6 text-center ">
-        <span>© All rights reserved by Simplify Infotech Pvt. Ltd.</span>
+        <span>© All rights reserved by Simplify Infotech Pvt. Ltd. Submitted by Ritik Ojha</span>
 
       </div>
     </footer>

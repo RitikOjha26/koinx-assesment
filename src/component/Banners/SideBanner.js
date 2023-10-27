@@ -8,7 +8,7 @@ const SideBanner = () => {
     return (
         <div className='md:h-auto bg-[#0052FE] rounded-[25px] text-white  '>
             
-            <div className='md:py-[55px] md:px-[16px] text-center items-center'>
+            <div className=' md:p-[55px]  text-center items-center'>
                 <h1 className='text-[1.5rem] font-bold mb-5 '>Get Started with KoinX for FREE</h1>
 
                 <span className=' text-[0.9rem] text-center text-semibold'>With our range of features that you can equip for free,

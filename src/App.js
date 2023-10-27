@@ -14,13 +14,13 @@ function App() {
       <Navabar />
 
       {/* Main content layout */}
-      <div className="flex flex-col w-screen h-auto md:min-h-auto ml-1 md:flex-row md:w-full ">
+      <div className="flex flex-col h-auto md:min-h-auto ml-1 md:flex-row ">
 
         <div className="w-auto h-auto pt-[5vh]  md:ml-[4vh] md:rounded-md">
 
-          <div id='1' className="bg-white rounded-md p-5 h-auto "><CryptoTaxCalculator /></div>
+          <div id='1' className="bg-white rounded-md sm:p-[17px] md:px-[79px] md:py-[35px] h-auto "><CryptoTaxCalculator /></div>
 
-          <div id='2' className="bg-white rounded-md mt-5 h-auto "><Faq /></div>
+          <div id='2' className="bg-white rounded-md mt-5 h-auto p-[25px] "><Faq /></div>
 
         </div>
 
