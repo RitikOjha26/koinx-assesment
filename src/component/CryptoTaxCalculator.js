@@ -83,7 +83,7 @@ const CryptoTaxCalculator = () => {
     };
 
     useEffect(() => {
-        if (purchasePrice !== -1 && salePrice !== -1 && expenses !== -1) {
+        if (purchasePrice !== '' && salePrice !== '' && expenses !== -1 && expenses !== '') {
             const gains = salePrice - purchasePrice - expenses;
             console.log(expenses);
             if (gains >= 0) {
@@ -160,6 +160,9 @@ const CryptoTaxCalculator = () => {
                             id="grid-first-name"
                             className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 text-gray-700 border focus:outline-none focus:bg-white focus:border-gray-500"
                             placeholder="$10000"
+                            onInput={(e) => {
+                                e.target.value = e.target.value.replace(/[^0-9.]/g, '');
+                            }}
                             onChange={handlePurchasePriceChange}
                         />
                     </div>
@@ -172,6 +175,9 @@ const CryptoTaxCalculator = () => {
                             id="grid-last-name"
                             className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 text-gray-700 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
                             placeholder="$20000"
+                            onInput={(e) => {
+                                e.target.value = e.target.value.replace(/[^0-9.]/g, '');
+                            }}
                             onChange={handleSalePriceChange}
 
                         />
@@ -185,6 +191,9 @@ const CryptoTaxCalculator = () => {
                             id="grid-first-name"
                             className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 text-gray-700 border focus:outline-none focus:bg-white"
                             placeholder="$30000"
+                            onInput={(e) => {
+                                e.target.value = e.target.value.replace(/[^0-9.]/g, '');
+                            }}
                             onChange={handleExpensesChange}
                         />
                     </div>
