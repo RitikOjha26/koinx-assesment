@@ -8,9 +8,9 @@ import Flag from '../assets/images/flag.jpg';
 const CryptoTaxCalculator = () => {
 
     // State variables
-    const [purchasePrice, setPurchasePrice] = useState(0);
-    const [salePrice, setSalePrice] = useState(0);
-    const [expenses, setExpenses] = useState(0);
+    const [purchasePrice, setPurchasePrice] = useState(-1);
+    const [salePrice, setSalePrice] = useState(-1);
+    const [expenses, setExpenses] = useState(-1);
     const [showForm, setShowForm] = useState(false);
     const [isLongTerm, setIsLongTerm] = useState(false);
     const [annualIncome, setAnnualIncome] = useState("");
@@ -22,11 +22,48 @@ const CryptoTaxCalculator = () => {
     const [discount, setDiscount] = useState(0);
     const [payableTax, setPayableTax] = useState(0);
 
+    //Debounce Function
+    const debounce = (func, delay) => {
+        let timer;
+        return function () {
+            const context = this;
+            const args = arguments;
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                func.apply(context, args);
+            }, delay);
+        };
+    };
+
+    // State variables with debounce
+    const setPurchasePriceDebounced = debounce(setPurchasePrice, 250);
+    const setSalePriceDebounced = debounce(setSalePrice, 250);
+    const setExpensesDebounced = debounce(setExpenses, 250);
+    const setTaxRateDebounced = debounce(setTaxrate, 250);
+
+    // Functions to handle purchase price , sale price , expense and tax rate change with debounce
+    const handlePurchasePriceChange = (e) => {
+        setPurchasePriceDebounced(e.target.value);
+    };
+
+
+    const handleSalePriceChange = (e) => {
+        setSalePriceDebounced(e.target.value);
+    };
+
+
+    const handleExpensesChange = (e) => {
+        setExpensesDebounced(e.target.value);
+    };
+
+
+
+
     // Function to handle tax rate change
     const handleTaxRateChange = (event) => {
         const selectedRange = event.target.value;
         const selectedIncomeRange = INCOME_RANGES.find((range) => range.range === selectedRange);
-        
+
         if (selectedIncomeRange.id) {
             setTaxrate(selectedIncomeRange.Trate);
             setTaxval(selectedIncomeRange.taxRate);
@@ -35,18 +72,20 @@ const CryptoTaxCalculator = () => {
         }
     };
 
+    
+
     // Function to handle short/long-term investment button click
     const handleButtonClick = (EVENT) => {
         setShowForm(EVENT);
         setIsLongTerm(EVENT);
         setIsShortTerm(!EVENT);
-        console.log(isShortTerm);
+
     };
 
     useEffect(() => {
         if (purchasePrice !== -1 && salePrice !== -1 && expenses !== -1) {
             const gains = salePrice - purchasePrice - expenses;
-
+            console.log(expenses);
             if (gains >= 0) {
                 if (isLongTerm) {
                     const calculate_discount = gains * 0.5; // 50% discount for long term
@@ -67,10 +106,15 @@ const CryptoTaxCalculator = () => {
             else {
                 setCapitalGain(0);
                 setPayableTax(0);
+                setNetCapitalGain(0);
+                setPayableTax(0);
             }
         }
         else {
             // Form Validation Things Here
+            setCapitalGain(0);
+            setNetCapitalGain(0);
+            setPayableTax(0);
         }
     }, [purchasePrice, salePrice, expenses, taxRate, isLongTerm, discount]);
 
@@ -98,7 +142,7 @@ const CryptoTaxCalculator = () => {
                             </label>
                             <div className="relative">
                                 <select id="Country" className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 border border-gray-200 text-gray-700 focus:outline-none focus:bg-white focus:border-gray-500">
-                                    <option><img src={Flag} alt="Flag"  />Australia</option>
+                                    <option><img src={Flag} alt="Flag" />Australia</option>
                                 </select>
                             </div>
                         </div>
@@ -112,11 +156,11 @@ const CryptoTaxCalculator = () => {
                         </label>
                         <input
                             type="text"
-                            
+
                             id="grid-first-name"
                             className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 text-gray-700 border focus:outline-none focus:bg-white focus:border-gray-500"
                             placeholder="$10000"
-                            onChange={(e) => { setPurchasePrice(e.target.value) }}
+                            onChange={handlePurchasePriceChange}
                         />
                     </div>
                     <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0">
@@ -128,7 +172,8 @@ const CryptoTaxCalculator = () => {
                             id="grid-last-name"
                             className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 text-gray-700 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
                             placeholder="$20000"
-                            onChange={(e) => { setSalePrice(e.target.value) }}
+                            onChange={handleSalePriceChange}
+
                         />
                     </div>
                     <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0">
@@ -140,7 +185,7 @@ const CryptoTaxCalculator = () => {
                             id="grid-first-name"
                             className="block w-full px-4 py-3 rounded leading-tight bg-gray-200 text-gray-700 border focus:outline-none focus:bg-white"
                             placeholder="$30000"
-                            onChange={(e) => { setExpenses(e.target.value) }}
+                            onChange={handleExpensesChange}
                         />
                     </div>
                     <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0 md:mt-6 sm:mt-0">
@@ -152,8 +197,8 @@ const CryptoTaxCalculator = () => {
                                 type="button"
                                 id='shortTerm'
                                 onClick={() => { handleButtonClick(false); }}
-                                className={`mt-2 block w-[50vw] md:w-[50%] mr-4 py-3 px-4 rounded leading-tight bg-gray-200 border-2 ${isShortTerm? 'text-blue-700 border-blue-600 focus:border-blue-600' : 'border-gray-200 focus:border-gray-500 text-gray-700 '}`}>
-                                Short Term <FontAwesomeIcon icon={faCheck} className={`${isShortTerm? 'text-blue-600 border-blue-600 text-xl px-[1rem]' : 'hidden '}`} />
+                                className={`mt-2 block w-[50vw] md:w-[50%] mr-4 py-3 px-4 rounded leading-tight bg-gray-200 border-2 ${isShortTerm ? 'text-blue-700 border-blue-600 focus:border-blue-600' : 'border-gray-200 focus:border-gray-500 text-gray-700 '}`}>
+                                Short Term <FontAwesomeIcon icon={faCheck} className={`${isShortTerm ? 'text-blue-600 border-blue-600 text-xl px-[1rem]' : 'hidden '}`} />
 
                             </button>
                             <button
@@ -161,7 +206,7 @@ const CryptoTaxCalculator = () => {
                                 id='longTerm'
                                 onClick={() => { handleButtonClick(true); }}
                                 className={`mt-2 block w-[50vw] md:w-[50%] py-3 px-4 rounded leading-tight bg-gray-200 border-2  ${isLongTerm ? 'text-blue-700 border-blue-600 focus:border-blue-600' : 'border-gray-200 focus:border-gray-500 text-gray-700'}`}>
-                                Long Term <FontAwesomeIcon icon={faCheck} className={`${isLongTerm? 'text-blue-600 border-blue-600 text-xl px-[1rem]' : 'hidden '}`} />
+                                Long Term <FontAwesomeIcon icon={faCheck} className={`${isLongTerm ? 'text-blue-600 border-blue-600 text-xl px-[1rem]' : 'hidden '}`} />
                             </button>
                         </div>
                     </div>
